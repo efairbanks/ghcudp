@@ -24,7 +24,9 @@ int main(int argc, char** argv) {
     //extproc->Print("test\n");
     char c;
     while((c=extproc->ReadStdOutChar())!=EOF) fprintf(stdout, "%c", c);
-    while((c=extproc->ReadStdErrorChar())!=EOF) fprintf(stdout, "%c", c);
+    while((c=extproc->ReadStdErrorChar())!=EOF) fprintf(stderr, "%c", c);
+    fflush(stdout);
+    fflush(stderr);
   }
   //#endif
   return 0;
