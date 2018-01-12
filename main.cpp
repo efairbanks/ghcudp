@@ -10,6 +10,7 @@
 ExtProc* extproc;
 void udpCallback(char* packet, int packetSize, void* data) {
   for(int i=0; i<packetSize; i++) extproc->Print("%c", packet[i]); //fprintf(stdout,"%c", packet[i]);
+  extproc->Print("\n\n");
 }
 int main(int argc, char** argv) {
   //#ifdef SEND
